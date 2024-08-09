@@ -50,7 +50,7 @@ export const login = async (req, res) => {
 
     //GENERATE COOKIE TOKEN AND SEND TO USER
 
-const age = 1000 * 60 * 60 * 24 * 7;
+const age = 1000 * 60 * 60 * 24 * 18;
     const token = jwt.sign(
       {
         id: user.id,

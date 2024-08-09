@@ -2,7 +2,7 @@ import { Server } from "socket.io";
 
 const io = new Server({
   cors: {
-    origin: "https://wave-estate-frontend.onrender.com/",
+    origin: "https://wave-estate-frontend.onrender.com",
   },
 });
 
@@ -44,4 +44,4 @@ io.on("connection", (socket) => {
   });
 });
 
-io.listen("4000");
+io.listen("https://wave-estate-backend.onrender.com");

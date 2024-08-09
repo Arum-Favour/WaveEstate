@@ -2,7 +2,7 @@ import { Server } from "socket.io";
 
 const io = new Server({
   cors: {
-    origin: "https://wave-estate-backend.onrender.com",
+    origin: "https://wave-estate-frontend.onrender.com/",
   },
 });
 

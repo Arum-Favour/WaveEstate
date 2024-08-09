@@ -44,4 +44,4 @@ io.on("connection", (socket) => {
   });
 });
 
-io.listen("https://wave-estate-backend.onrender.com");
+io.listen("4000");

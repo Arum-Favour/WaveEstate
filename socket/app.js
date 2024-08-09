@@ -12,6 +12,8 @@ const addUser = (userId, socketId) => {
   const userExits = onlineUser.find((user) => user.userId === userId);
   if (!userExits) {
     onlineUser.push({ userId, socketId });
+    console.log(onlineUser);
+    
   }
 };
 
@@ -30,7 +32,11 @@ io.on("connection", (socket) => {
 
   socket.on("sendMessage", ({ receiverId, data }) => {
     const receiver = getUser(receiverId);
-    io.to(receiver.socketId).emit("getMessage", data);
+    if (receiver) {
+      io.to(receiver.socketId).emit("getMessage", data);
+    } else {
+      console.error(`User not found: ${receiverId}`);
+    }
   });
 
   socket.on("disconnect", () => {

@@ -12,7 +12,7 @@ const app = express();
 const port = process.env.PORT || 8800;
 
 
-app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
+app.use(cors({ origin: "*", credentials: true }));
 console.log('CLIENT_URL:', process.env.CLIENT_URL)
 console.log('CLIENT_URL:',  process.env.JWT_SECRET_KEY);
 app.use(express.json());

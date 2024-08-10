@@ -14,7 +14,7 @@ const port = process.env.PORT || 8800;
 
 app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 console.log('CLIENT_URL:', process.env.CLIENT_URL)
-console.log('CLIENT_URL:', "hello world");
+console.log('CLIENT_URL:',  process.env.JWT_SECRET_KEY);
 app.use(express.json());
 app.use(cookieParser());
 

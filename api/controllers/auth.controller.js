@@ -32,7 +32,6 @@ export const register = async (req, res) => {
 
 
 export const login = async (req, res) => {
-  console.log(process.env.JWT_SECRET_KEY);
   const { username, password } = req.body;
   try {
     //CHECK IF USER EXISTS
@@ -51,7 +50,8 @@ export const login = async (req, res) => {
 
     //GENERATE COOKIE TOKEN AND SEND TO USER
 
-const age = 1000 * 60 * 60 * 24 * 18;
+    const age = 1000 * 60 * 60 * 24 * 7;
+
     const token = jwt.sign(
       {
         id: user.id,
@@ -62,9 +62,9 @@ const age = 1000 * 60 * 60 * 24 * 18;
     );
 
     const {password:userPassword, ...userInfo} = user
-    
- console.log("Generated token:", token);
-    
+
+    console.log("Generated token:", token);
+
     res
       .cookie("token", token, {
         httpOnly: true,
@@ -73,8 +73,6 @@ const age = 1000 * 60 * 60 * 24 * 18;
       })
       .status(200)
       .json(userInfo);
-   
-
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: "Failed to log in" });

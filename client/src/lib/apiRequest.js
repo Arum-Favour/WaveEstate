@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiRequest = axios.create({
-  baseURL: "https://wave-estate-backend.onrender.com",
+  baseURL: "https://eonwavetech.com",
   withCredentials: true,
 });
 

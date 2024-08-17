@@ -1,7 +1,7 @@
 import prisma from "../lib/prisma.js";
 
 export const getChats = async (req, res) => {
-  const tokenUserId = req.id;
+  const tokenUserId = req.params.id;
   try {
     const chats = await prisma.chat.findMany({
       where: {

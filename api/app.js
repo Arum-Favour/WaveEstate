@@ -12,10 +12,7 @@ const app = express();
 const port = process.env.PORT || 8800;
 
 
-app.use(cors({ origin: "https://wave-estate-frontend.onrender.com", credentials: true ,  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'], }));
-console.log('CLIENT_URL:', process.env.CLIENT_URL)
-console.log('CLIENT_URL:',  process.env.JWT_SECRET_KEY);
+app.use(cors({ origin: "https://wave-estate-frontend.onrender.com", credentials: true});
 app.use(express.json());
 app.use(cookieParser());
 

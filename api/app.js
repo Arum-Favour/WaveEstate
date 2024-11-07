@@ -18,11 +18,8 @@ app.use(cookieParser());
 
 
 app.use("/api/auth", authRoute);
-<<<<<<< HEAD
 app.use("/api/posts", postRoute);
 app.use("/api/test", testRoute);
-=======
->>>>>>> e57e3b9eb5092d1c10f2773dfc1dc43dada60d4c
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/test", testRoute);

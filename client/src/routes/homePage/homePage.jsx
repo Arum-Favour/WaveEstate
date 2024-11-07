@@ -4,8 +4,7 @@ import "./homePage.scss";
 import { AuthContext } from "../../context/AuthContext";
 
 function HomePage() {
-
-  const {currentUser} = useContext(AuthContext)
+  const { currentUser } = useContext(AuthContext);
 
   return (
     <div className="homePage">
@@ -13,10 +12,12 @@ function HomePage() {
         <div className="wrapper">
           <h1 className="title">Find Real Estate & Get Your Dream Place</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-            explicabo suscipit cum eius, iure est nulla animi consequatur
-            facilis id pariatur fugit quos laudantium temporibus dolor ea
-            repellat provident impedit!
+            WaveEstate is a sophisticated real estate listing platform that
+            streamlines the process of connecting buyers, sellers, and renters
+            with premium properties. Featuring advanced search capabilities,
+            interactive mapping, and a seamless user experience, WaveEstate is
+            designed to make property discovery and transactions efficient,
+            secure, and straightforward.
           </p>
           <SearchBar />
           <div className="boxes">

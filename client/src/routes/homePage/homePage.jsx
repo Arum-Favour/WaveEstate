@@ -12,12 +12,16 @@ function HomePage() {
         <div className="wrapper">
           <h1 className="title">Find Real Estate & Get Your Dream Place</h1>
           <p>
+<<<<<<< HEAD
             WaveEstate is a sophisticated real estate listing platform that
             streamlines the process of connecting buyers, sellers, and renters
             with premium properties. Featuring advanced search capabilities,
             interactive mapping, and a seamless user experience, WaveEstate is
             designed to make property discovery and transactions efficient,
             secure, and straightforward.
+=======
+           WaveEstate is a sophisticated real estate listing platform that streamlines the process of connecting buyers, sellers, and renters with premium properties. Featuring advanced search capabilities, interactive mapping, and a seamless user experience, WaveEstate is designed to make property discovery and transactions efficient, secure, and straightforward.!
+>>>>>>> e57e3b9eb5092d1c10f2773dfc1dc43dada60d4c
           </p>
           <SearchBar />
           <div className="boxes">

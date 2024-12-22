@@ -40,7 +40,7 @@ export const getChats = async (req, res) => {
 };
 
 export const getChat = async (req, res) => {
-  const tokenUserId = req.userId;
+  const tokenUserId = req.id;
 
   try {
     const chat = await prisma.chat.findUnique({

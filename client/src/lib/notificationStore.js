@@ -1,13 +1,10 @@
 import { create } from "zustand";
 import apiRequest from "./apiRequest";
 
- const token = localStorage.getItem('token')
 export const useNotificationStore = create((set) => ({
   number: 0,
   fetch: async () => {
-    const res = await apiRequest("/api/users/notification", headers: {
-    Authorization: `Bearer ${token}`,
-  });
+    const res = await apiRequest("/api/users/notification"});
     set({ number: res.data });
   },
   decrease: () => {
